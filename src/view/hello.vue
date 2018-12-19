@@ -10,6 +10,7 @@
        }
      },
      mounted () {
+       console.log(this.$store)
      }
    }
  </script>

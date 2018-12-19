@@ -1,5 +1,5 @@
-import Hello from '../view/hello.vue'
-import Home from '../view/home.vue'
+import Hello from '@view/hello.vue'
+import Home from '@view/home.vue'
 const routes = [
     {
         path: '/',

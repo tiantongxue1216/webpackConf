@@ -1,6 +1,7 @@
-const path = require('path')
-const htmlWebpackPlugin =  require('html-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+import path from 'path'
+
+import htmlWebpackPlugin from 'html-webpack-plugin'
+import VueLoaderPlugin from 'vue-loader/lib/plugin'
 module.exports = {
     entry: ["@babel/polyfill","./src/index.js"],
     output: {
@@ -46,7 +47,14 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',//必备
             '@': path.resolve(__dirname, 'src'),
-            'css': path.resolve(__dirname, 'src/css')
+            '@api': path.resolve(__dirname, 'src/api'),
+            '@images': path.resolve(__dirname, 'src/images'),
+            '@libs': path.resolve(__dirname, 'src/libs'),
+            '@router': path.resolve(__dirname, 'src/router'),
+            '@store': path.resolve(__dirname, 'src/store'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+            '@template': path.resolve(__dirname, 'src/template'),
+            '@view': path.resolve(__dirname, 'src/view'),
         }
     },
     plugins: [
