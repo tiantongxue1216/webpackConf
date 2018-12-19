@@ -2,15 +2,18 @@ const path = require('path')
 const htmlWebpackPlugin =  require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
-    entry: {
-        app: './src/index.js'
-    },
+    entry: ["@babel/polyfill","./src/index.js"],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'build'),
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                 exclude: /node_modules/, 
+                 loader: "babel-loader"
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',

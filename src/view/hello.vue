@@ -10,7 +10,6 @@
        }
      },
      mounted () {
-       console.log('111333')
      }
    }
  </script>
